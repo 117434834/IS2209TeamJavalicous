@@ -22,7 +22,7 @@ public class IS2209TeamJavalicous extends Application {
     @Override
     public void start(Stage primaryStage) {
         Button btn = new Button();
-        btn.setText("Say 'Javaliciossss'");
+        btn.setText("Say 'Javalicios'");
         btn.setOnAction(new EventHandler<ActionEvent>() {
             
             @Override
