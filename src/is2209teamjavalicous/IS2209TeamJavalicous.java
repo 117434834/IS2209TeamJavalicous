@@ -34,6 +34,8 @@ public class IS2209TeamJavalicous extends Application {
         StackPane root = new StackPane();
         
         Scene scene = new Scene(root, 300, 250);
+        root.getChildren().add(btn);
+        
         
         primaryStage.setTitle("Javaliciossss");
         primaryStage.setScene(scene);
