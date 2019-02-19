@@ -22,7 +22,7 @@ public class IS2209TeamJavalicous extends Application {
     @Override
     public void start(Stage primaryStage) {
         Button btn = new Button();
-        btn.setText("Say 'Javalicios'");
+        btn.setText("Say 'Javalicous'");
         btn.setOnAction(new EventHandler<ActionEvent>() {
             
             @Override
@@ -32,7 +32,6 @@ public class IS2209TeamJavalicous extends Application {
         });
         
         StackPane root = new StackPane();
-        root.getChildren().add(btn);
         
         Scene scene = new Scene(root, 300, 250);
         
