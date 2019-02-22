@@ -11,12 +11,13 @@ package is2209teamjavalicous;
  */
 public class OddsTester {
     
+    //Take in variables
     int intInput1 = 0, intInput2 =0, intInput3 = 0, intInputTotal = 0;
     double dblOutput1 = 0, dblOutput2 = 0, dblOutput3 = 0, dblOutputTotal = 0;
     boolean blnSuccess = false;
     
     public void calculateTotalInputOutput() {
-        //Use this to calculate total input and output
+        //Use this to calculate total input and total output
         dblOutputTotal = dblOutput1 + dblOutput2 + dblOutput3;
         intInputTotal = intInput1 + intInput2 + intInput3;
     }
