@@ -22,14 +22,17 @@ import javafx.scene.layout.GridPane;
  * @author Jacques
  */
 public class oddTesterUI {
-    
+    //Boolean
+        boolean blnOddSuccess;
+        
     public Scene show() {
         
         //Gridpane
         GridPane gridOddsTester = new GridPane();
         gridOddsTester.setAlignment(Pos.CENTER);
         
-        
+        //Reset boolean at start
+        blnOddSuccess = false;
         
         //Labels
         Label lblHome = new Label("Home Odds:");
@@ -94,7 +97,8 @@ public class oddTesterUI {
             
             @Override
             public void handle(ActionEvent event) {
-                testObject.testOdds(Integer.parseInt(txtHomeFirstNum.getText()),
+                blnOddSuccess = testObject.testOdds(
+                        Integer.parseInt(txtHomeFirstNum.getText()),
                         Integer.parseInt(txtDrawFirstNum.getText()),
                         Integer.parseInt(txtAwayFirstNum.getText()),
                         Integer.parseInt(txtHomeSecondNum.getText()),
@@ -103,7 +107,9 @@ public class oddTesterUI {
                         Integer.parseInt(txtUpperBound.getText()),
                         Integer.parseInt(txtLowerBound.getText())  );
                 
-                
+                if(blnOddSuccess){
+                    //Code to run if this is a successful test or not.
+                }
             }
         });
         
