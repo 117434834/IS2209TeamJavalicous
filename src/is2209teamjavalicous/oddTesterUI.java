@@ -29,6 +29,8 @@ public class oddTesterUI {
         GridPane gridOddsTester = new GridPane();
         gridOddsTester.setAlignment(Pos.CENTER);
         
+        
+        
         //Labels
         Label lblHome = new Label("Home Odds:");
         gridOddsTester.add(lblHome, 1, 2);
@@ -53,6 +55,8 @@ public class oddTesterUI {
         
         Label lblLowerBound = new Label("Lower Bound:");
         gridOddsTester.add(lblLowerBound,6,3);
+        
+        
         
         //Text fields
         TextField txtHomeFirstNum = new TextField();
@@ -79,6 +83,8 @@ public class oddTesterUI {
         TextField txtLowerBound = new TextField();
         gridOddsTester.add(txtLowerBound, 7, 3);
         
+        
+        
         //Button
         Button btnTest = new Button();
         btnTest.setText("Test odds");
@@ -96,6 +102,8 @@ public class oddTesterUI {
                         Integer.parseInt(txtAwaySecondNum.getText()),
                         Integer.parseInt(txtUpperBound.getText()),
                         Integer.parseInt(txtLowerBound.getText())  );
+                
+                
             }
         });
         
