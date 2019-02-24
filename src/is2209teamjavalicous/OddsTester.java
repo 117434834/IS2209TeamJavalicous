@@ -12,13 +12,12 @@ package is2209teamjavalicous;
 public class OddsTester {
     
     //Take in variables
-    int intInput1 = 0, intInput2 =0, intInput3 = 0, intInputTotal = 0;
-    double dblOutput1 = 0, dblOutput2 = 0, dblOutput3 = 0, dblOutputTotal = 0;
-    boolean blnSuccess = false;
+    int intInput1, intInput2, intInput3;
+    private int intInputTotal;
+    private double dblOutput1 , dblOutput2, dblOutput3;
+    private boolean blnSuccess = false;
     
-    public void calculateTotalInputOutput() {
-        //Use this to calculate total input and total output
-        dblOutputTotal = dblOutput1 + dblOutput2 + dblOutput3;
+    public void calculateTotalInput() {
         intInputTotal = intInput1 + intInput2 + intInput3;
     }
     
@@ -33,10 +32,11 @@ public class OddsTester {
         //Return output
         return dblOutput;
     }
-    public void testOdds(int intOddsFirstNum1, int intOddsFirstNum2, 
+    public boolean testOdds(int intOddsFirstNum1, int intOddsFirstNum2, 
             int intOddsFirstNum3,int intOddsSecondNum1,int intOddsSecondNum2,
             int intOddsSecondNum3, int intLowerBound, int intUpperBound){
         
+        blnSuccess = false;
         for (intInput1 = intLowerBound; intInput1<=intUpperBound; intInput1++) {
             //Run our external code
             dblOutput1 = calculateIndividualOutput(intOddsFirstNum1, intOddsSecondNum1, intInput1 );
@@ -51,9 +51,11 @@ public class OddsTester {
                     //Run our external code
                     dblOutput3 = calculateIndividualOutput(intOddsFirstNum3, intOddsSecondNum3, intInput3);
                     
-                    calculateTotalInputOutput();
+                    calculateTotalInput();
                     
-                    if (dblOutputTotal > intInputTotal){
+                    if (dblOutput1 > intInputTotal && 
+                            dblOutput2 > intInputTotal && 
+                            dblOutput3 > intInputTotal){
                         blnSuccess = true;
                         break;     
                     }
@@ -70,6 +72,16 @@ public class OddsTester {
                 break;
             }
         }//End First For Looop
+        
+        System.out.println("Input 1: " + intInput1);
+        System.out.println("Input 2: " + intInput2);
+        System.out.println("Input 3: " + intInput3);
+        System.out.println("Output 1:" + dblOutput1);
+        System.out.println("Output 2:" + dblOutput2);
+        System.out.println("Output 3:" + dblOutput3);
+        
+        return blnSuccess;
+        
         
     }
     }
