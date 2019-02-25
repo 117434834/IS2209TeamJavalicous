@@ -23,11 +23,12 @@ public class IS2209TeamJavalicous extends Application {
     public void start(Stage primaryStage) {
         Button btn = new Button();
         btn.setText("Say 'Javalicous'");
+        oddTesterUI oddTestForm = new oddTesterUI();
         btn.setOnAction(new EventHandler<ActionEvent>() {
             
             @Override
             public void handle(ActionEvent event) {
-                System.out.println("Javaliciossss TEST123");
+                primaryStage.setScene(oddTestForm.show());
             }
         });
         
@@ -41,8 +42,8 @@ public class IS2209TeamJavalicous extends Application {
         primaryStage.setScene(scene);
         primaryStage.show();
         
-        oddTesterUI test = new oddTesterUI();
-        primaryStage.setScene(test.oddTesterUI());
+        
+        
     }
 
     /**
