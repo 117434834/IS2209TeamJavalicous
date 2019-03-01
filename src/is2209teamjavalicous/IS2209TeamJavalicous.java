@@ -23,21 +23,27 @@ public class IS2209TeamJavalicous extends Application {
     public void start(Stage primaryStage) {
         Button btn = new Button();
         btn.setText("Say 'Javalicous'");
+        oddTesterUI oddTestForm = new oddTesterUI();
         btn.setOnAction(new EventHandler<ActionEvent>() {
             
             @Override
             public void handle(ActionEvent event) {
-                System.out.println("Javaliciossss");
+                primaryStage.setScene(oddTestForm.show());
             }
         });
         
         StackPane root = new StackPane();
         
         Scene scene = new Scene(root, 300, 250);
+        root.getChildren().add(btn);
+        
         
         primaryStage.setTitle("Javaliciossss");
         primaryStage.setScene(scene);
         primaryStage.show();
+        
+        
+        
     }
 
     /**
