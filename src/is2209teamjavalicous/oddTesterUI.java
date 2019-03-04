@@ -25,6 +25,7 @@ public class oddTesterUI {
     //Boolean
         boolean blnOddSuccess;
         
+        //Scene only used for GUI
     public Scene show() {
         
         //Gridpane
@@ -92,11 +93,16 @@ public class oddTesterUI {
         Button btnTest = new Button();
         btnTest.setText("Test odds");
         
+        //Instantiate an object of the class
         OddsTester testObject = new OddsTester();
+        
+        //Event trigger on button click
         btnTest.setOnAction(new EventHandler<ActionEvent>() {
             
             @Override
             public void handle(ActionEvent event) {
+                
+                //This code actually checks the values
                 blnOddSuccess = testObject.testOdds(
                         Integer.parseInt(txtHomeFirstNum.getText()),
                         Integer.parseInt(txtDrawFirstNum.getText()),
@@ -104,24 +110,28 @@ public class oddTesterUI {
                         Integer.parseInt(txtHomeSecondNum.getText()),
                         Integer.parseInt(txtDrawSecondNum.getText()),
                         Integer.parseInt(txtAwaySecondNum.getText()),
-                        Integer.parseInt(txtUpperBound.getText()),
-                        Integer.parseInt(txtLowerBound.getText())  );
+                        Integer.parseInt(txtLowerBound.getText()),
+                        Integer.parseInt(txtUpperBound.getText())  );
                 
                 if(blnOddSuccess){
-                    //Code to run if this is a successful test or not.
+                    //Code to run to show if this is a successful test or not.
+                    System.out.println("Success");
+                }else{
+                    System.out.println("Failure");
                 }
+                System.out.println("-----");
+                
             }
         });
         
+        //Insert button into GUI
         gridOddsTester.add(btnTest, 2, 6);
         
+        //Create scene to be outputted
         Scene scene = new Scene(gridOddsTester);
         
+        //Output scene
         return scene;
     }
-    
-    
-
-    
     
 }
