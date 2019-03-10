@@ -21,13 +21,16 @@ public class IS2209TeamJavalicous extends Application {
     
     @Override
     public void start(Stage primaryStage) {
+        //Simple log in to be inserted here, for test purposes just a button
         Button btn = new Button();
-        btn.setText("Say 'Javalicous'");
+        btn.setText("Log-In");
+        
         oddTesterUI oddTestForm = new oddTesterUI();
         btn.setOnAction(new EventHandler<ActionEvent>() {
             
             @Override
             public void handle(ActionEvent event) {
+                
                 primaryStage.setScene(oddTestForm.show());
             }
         });
@@ -38,7 +41,7 @@ public class IS2209TeamJavalicous extends Application {
         root.getChildren().add(btn);
         
         
-        primaryStage.setTitle("Javaliciossss");
+        primaryStage.setTitle("Sigma Odds Log-In");
         primaryStage.setScene(scene);
         primaryStage.show();
         
