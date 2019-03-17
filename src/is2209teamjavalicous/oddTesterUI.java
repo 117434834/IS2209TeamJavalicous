@@ -101,6 +101,7 @@ public class oddTesterUI {
             
             @Override
             public void handle(ActionEvent event) {
+                testObject.initialisePrimeArray();
                 
                 //This code actually checks the values
                 blnOddSuccess = testObject.testOdds(
